@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-import os
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -87,22 +86,11 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/tasks/'
 LOGOUT_REDIRECT_URL = '/'
 
-# SOCIALACCOUNT_PROVIDERS = {
-#     'google': {
-#         'APP': {
-#             'client_id': os.getenv("GOOGLE_CLIENT_ID"),
-#             'secret': os.getenv("GOOGLE_CLIENT_SECRET"),
-#         }
-#     }
-# }
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
         'APP': {
-            'client_id': os.getenv("GOOGLE_CLIENT_ID"),
-            'secret': os.getenv("GOOGLE_CLIENT_SECRET"),
+            'client_id': "252494890143-0r7fev4qdvqmbo6089l3c88tfiitj6n2.apps.googleusercontent.com",
+            'secret': "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",
             'key': ''
         }
     }
